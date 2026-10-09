@@ -37,9 +37,15 @@ Nền tảng kết nối trực tiếp giữa **Sinh viên tìm trọ** và **Ch
 - **Đặt lịch trực tuyến**: Lưới đặt lịch rảnh theo khung giờ 1h trực quan.
 - **Không biểu tượng / Emoji**: Giao diện tiếng Việt chuẩn có dấu 100%, phong cách hiện đại dọn dẹp tối đa.
 
+## Đường Dẫn Dự Án & Triển Khai
+
+- **GitHub Repository**: [https://github.com/phamquocdat797979/TroNau](https://github.com/phamquocdat797979/TroNau)
+- **Vercel Live Production**: [https://tro-nau.vercel.app](https://tro-nau.vercel.app)
+
 ---
 
 ## Tài Liệu Chi Tiết
 
 Xem tài liệu quy chuẩn chính thức của dự án tại: [TAI_LIEU.md](file:///c:/Users/MY%20PC/Downloads/TroNau/TAI_LIEU.md)
+
 
