@@ -34,3 +34,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# internal documentation
+BAO_CAO_RA_SOAT_PROJECT.md
+implementation_plan.md
+yeu-cau.md
+
