@@ -2,7 +2,7 @@
   <img src="public/logo.png" alt="Logo Trọ Nẫu" width="220" />
 </p>
 
-<h1 align="center">TRỌ NẪU (TRONAU.VN)</h1>
+<h1 align="center">TRỌ NẪU</h1>
 
 <p align="center">
   <b>Nền tảng kết nối trực tiếp giữa Sinh viên tìm trọ và Chủ trọ cho thuê tại TP. Quy Nhơn, Bình Định</b>
@@ -13,13 +13,9 @@
   <a href="https://github.com/phamquocdat797979/TroNau"><b>Kho mã nguồn GitHub</b></a>
 </p>
 
----
-
 ## 1. TỔNG QUAN DỰ ÁN
 
-**Trọ Nẫu** (`TroNau.vn`) là ứng dụng Web App hiện đại được phát triển dành riêng cho cộng đồng sinh viên và chủ trọ tại Thành phố Quy Nhơn, tỉnh Bình Định. Hệ thống giúp sinh viên tìm kiếm phòng trọ chất lượng, đặt lịch hẹn xem phòng trực tuyến nhanh chóng, đồng thời hỗ trợ chủ trọ quản lý tin đăng và lịch hẹn hiệu quả.
-
----
+**Trọ Nẫu** là ứng dụng Web App hiện đại được phát triển dành riêng cho cộng đồng sinh viên và chủ trọ tại Thành phố Quy Nhơn, tỉnh Bình Định. Hệ thống giúp sinh viên tìm kiếm phòng trọ chất lượng, đặt lịch hẹn xem phòng trực tuyến nhanh chóng, đồng thời hỗ trợ chủ trọ quản lý tin đăng và lịch hẹn hiệu quả.
 
 ## 2. TÍNH NĂNG TRỌNG TÂM & ĐIỂM NỔI BẬT
 
@@ -32,8 +28,6 @@
 - **Đặt lịch Trực tuyến mượt mà**: Lưới chọn khung giờ rảnh 1 tiếng (07:00 - 19:00) trực quan với bảng màu phản hồi trạng thái rõ ràng (Màu xanh: Rảnh, Màu xám: Bận, Màu đỏ: Đã có người đặt).
 - **Tự động hóa Hệ thống**: Tự động dọn dẹp lịch hẹn quá hạn qua Vercel Cron Job chạy hàng ngày vào 02:00 ICT, gửi email xác minh và khôi phục mật khẩu bảo mật qua Gmail SMTP (Nodemailer).
 
----
-
 ## 3. CÔNG NGHỆ & HẠ TẦNG KỸ THUẬT
 
 | Thành phần | Công nghệ sử dụng | Ghi chú & Đặc điểm |
@@ -45,8 +39,6 @@
 | **Dịch vụ Email** | Nodemailer (Gmail SMTP) | Gửi email HTML khôi phục mật khẩu bảo mật với `token_hash` |
 | **Cron Job** | Vercel Cron Jobs | Chạy tự động lúc 02:00 ICT hàng ngày dọn dẹp lịch hẹn quá hạn |
 | **Phông chữ** | Be Vietnam Pro (Google Fonts) | Phông chữ tiếng Việt hiện đại, sắc nét trên mọi thiết bị |
-
----
 
 ## 4. HƯỚNG DẪN KHỞI CHẠY CỤC BỘ (LOCAL DEVELOPMENT)
 
@@ -87,15 +79,11 @@
 5. **Truy cập ứng dụng**:
    Mở trình duyệt và truy cập: [http://localhost:3001](http://localhost:3001)
 
----
-
 ## 5. THÔNG TIN TRIỂN KHAI (PRODUCTION DEPLOYMENT)
 
 - **Trang Web Chính Thức**: [https://tro-nau.vercel.app](https://tro-nau.vercel.app)
 - **Nền Tảng Triển Khai**: Vercel Cloud Platform
 - **Trạng Thái Vận Hành**: Hoạt động 24/7 ổn định, tự động biên dịch từ nhánh `main`.
-
----
 
 <p align="center">
   <b>Trọ Nẫu - Giải pháp tìm trọ an tâm & tiện lợi tại Quy Nhơn</b><br>
