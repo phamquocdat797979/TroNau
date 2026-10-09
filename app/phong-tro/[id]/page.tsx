@@ -531,7 +531,7 @@ export default function ChiTietPhongTroPage() {
               </div>
             )}
 
-            {soNha && sdtChuTro ? (
+            {profile?.role === 'sinh_vien' && daXacNhanLich && soNha && sdtChuTro ? (
               <div style={{ background: 'var(--mau-la-nhat)', padding: '14px 18px', borderRadius: '8px', border: '1px solid rgba(45,106,79,0.25)', marginBottom: '16px', fontSize: '0.9rem' }}>
                 <div style={{ fontWeight: '700', color: 'var(--mau-la)', marginBottom: '6px' }}>Đã xác nhận lịch hẹn xem phòng!</div>
                 <div><strong>Thời gian hẹn:</strong> {lichHenHienTai ? `${new Date(lichHenHienTai.ngay_hen).toLocaleDateString('vi-VN')} từ ${lichHenHienTai.gio_bat_dau.substring(0,5)} đến ${lichHenHienTai.gio_ket_thuc.substring(0,5)}` : 'Đã xác nhận'}</div>
