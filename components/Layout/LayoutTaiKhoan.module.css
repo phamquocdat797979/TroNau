@@ -1,0 +1,5 @@
+.khung_trang {
+  padding: var(--kc-32) 0 var(--kc-64);
+  background: transparent;
+  min-height: calc(100vh - 110px);
+}

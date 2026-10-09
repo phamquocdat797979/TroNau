@@ -1,0 +1,49 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--kc-4);
+  padding: 4px 10px;
+  border-radius: var(--bo-vua);
+  font-size: 0.775rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.con_trong {
+  background: var(--thanh-cong-nhat);
+  color: var(--mau-la);
+  border: 1px solid rgba(46, 125, 50, 0.2);
+}
+
+.da_cho_thue {
+  background: var(--nguy-hiem-nhat);
+  color: var(--nguy-hiem);
+  border: 1px solid rgba(198, 40, 40, 0.2);
+}
+
+.cho_duyet {
+  background: var(--canh-bao-nhat);
+  color: #b78103;
+  border: 1px solid rgba(245, 124, 0, 0.2);
+}
+
+.bi_tu_choi {
+  background: var(--nen-xam);
+  color: var(--chu-phu);
+  border: 1px solid var(--vien-nhat);
+}
+
+.cho_xac_nhan {
+  background: var(--canh-bao-nhat);
+  color: #b78103;
+}
+
+.da_xac_nhan {
+  background: var(--thanh-cong-nhat);
+  color: var(--mau-la);
+}
+
+.huy_sau_xac_nhan {
+  background: var(--nguy-hiem-nhat);
+  color: var(--nguy-hiem);
+}

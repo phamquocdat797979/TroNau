@@ -1,0 +1,143 @@
+.khung_tim_kiem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Tab lọc trạng thái dạng pill mỏng */
+.nhom_tab_trang_thai {
+  display: flex;
+  background: rgba(0, 0, 0, 0.22);
+  padding: 3px;
+  border-radius: var(--bo-vua);
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tab_trang_thai {
+  padding: 6px 14px;
+  border-radius: var(--bo-nho);
+  border: none;
+  background: transparent;
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.tab_trang_thai:hover {
+  color: #ffffff;
+}
+
+.tab_active {
+  background: #ffffff;
+  color: #1b4332 !important;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+}
+
+/* Ô nhập / Select */
+.o_nhap {
+  flex: 1;
+  min-width: 140px;
+}
+
+.o_nhap select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--bo-vua);
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: inherit;
+  background: rgba(248, 250, 248, 0.95);
+  color: #101828;
+  height: 36px;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.o_nhap select:focus {
+  outline: none;
+  border-color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+/* Thao tác nút */
+.cac_nut_thao_tac {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.nut_tim {
+  padding: 0 18px;
+  height: 36px;
+  background: #ffffff;
+  color: #1b4332;
+  border: none;
+  border-radius: var(--bo-vua);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.nut_tim:hover {
+  background: #f0fdf4;
+  color: #0f2d20;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nut_dat_lai {
+  padding: 0 14px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--bo-vua);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  backdrop-filter: blur(4px);
+}
+
+.nut_dat_lai:hover {
+  background: rgba(255, 255, 255, 0.32);
+  border-color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .khung_tim_kiem {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .nhom_tab_trang_thai {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .tab_trang_thai {
+    flex: 1;
+    text-align: center;
+  }
+  .o_nhap {
+    min-width: 130px;
+  }
+}

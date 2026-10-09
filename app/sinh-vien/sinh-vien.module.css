@@ -1,0 +1,66 @@
+.khung_sinh_vien {
+  padding: var(--kc-32) 0 var(--kc-64);
+  background: transparent;
+  min-height: calc(100vh - 120px);
+}
+
+.tieu_de_trang {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--mau-la);
+  margin-bottom: var(--kc-24);
+  text-align: center;
+}
+
+.danh_sach_the {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kc-16);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.the_khung {
+  background: var(--nen-trang);
+  border-radius: var(--bo-lon);
+  padding: var(--kc-20);
+  border: 1px solid var(--vien-nhat);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.thong_tin_xac_nhan {
+  background: var(--thanh-cong-nhat);
+  color: var(--mau-la);
+  padding: var(--kc-12) var(--kc-16);
+  border-radius: var(--bo-vua);
+  font-size: 0.9rem;
+  border: 1px solid rgba(46, 125, 50, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.thong_tin_cho {
+  background: var(--canh-bao-nhat);
+  color: #b78103;
+  padding: var(--kc-12) var(--kc-16);
+  border-radius: var(--bo-vua);
+  font-size: 0.85rem;
+}
+
+.nut_huy {
+  padding: 8px 14px;
+  background: var(--nguy-hiem-nhat);
+  color: var(--nguy-hiem);
+  border: 1px solid rgba(198, 40, 40, 0.3);
+  border-radius: var(--bo-vua);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--chuyen-nhanh);
+}
+
+.nut_huy:hover {
+  background: var(--nguy-hiem);
+  color: #ffffff;
+}

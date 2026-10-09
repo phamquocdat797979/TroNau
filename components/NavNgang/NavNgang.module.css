@@ -1,0 +1,109 @@
+/* Thanh điều hướng ngang - hiện ngay dưới Header */
+.thanh_nav_ngang {
+  background: var(--gradient-chinh);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.14);
+  position: sticky;
+  top: 64px; /* chiều cao Header */
+  z-index: 90;
+}
+
+.noi_dung_nav {
+  display: flex;
+  align-items: center;
+  gap: var(--kc-16);
+  height: 46px;
+}
+
+
+.danh_sach_menu {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+}
+
+.muc_menu {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--bo-vua);
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all var(--chuyen-nhanh);
+}
+
+.muc_menu:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+.muc_menu_kich_hoat {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Badge thông báo chưa đọc */
+.huy_so {
+  background: var(--nguy-hiem);
+  color: #ffffff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: var(--bo-tron);
+  line-height: 1.4;
+}
+
+/* Nút đăng xuất */
+.nut_dang_xuat {
+  margin-left: auto;
+  padding: 5px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.85);
+  border-radius: var(--bo-vua);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--chuyen-nhanh);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.nut_dang_xuat:hover {
+  background: rgba(231, 76, 60, 0.35);
+  border-color: rgba(255, 100, 100, 0.6);
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .noi_dung_nav {
+    height: auto;
+    min-height: 44px;
+    flex-wrap: wrap;
+    padding: 6px 0;
+    gap: var(--kc-8);
+  }
+
+  .danh_sach_menu {
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+
+  .muc_menu {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  .nut_dang_xuat {
+    margin-left: 0;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+}

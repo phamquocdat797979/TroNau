@@ -1,33 +1,103 @@
+/* ===================================================
+   TRONAU - HE THONG THIET KE TOAN CUC
+   Mau sac: Bien va nui Quy Nhon
+   Font: Be Vietnam Pro
+   =================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* CSS Variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Mau chinh */
+  --mau-la: #2d6a4f;
+  --mau-la-dam: #1e4d38;
+  --mau-bien: #1d6fa4;
+  --gradient-chinh: linear-gradient(135deg, #0f2e22 0%, #1a4d36 40%, #134e5e 75%, #0f3443 100%);
+  --mau-la-nhat: #e8f5ee;
+  --mau-bien-nhat: #e3f0f9;
+
+  /* Mau chu */
+  --chu-chinh: #1c1c1e;
+  --chu-phu: #5c6268;
+  --chu-mo: #a0a5aa;
+
+  /* Nen va vien diu mat */
+  --nen-trang: #fbfcfb;
+  --nen-xam: #f1f4f2;
+  --vien: #cbd2ce;
+  --vien-nhap: #cbd2ce;
+  --vien-nhat: #e1e6e3;
+
+  /* Trang thai */
+  --nguy-hiem: #c0392b;
+  --nguy-hiem-nhat: #fdf2f2;
+  --canh-bao: #d4801a;
+  --canh-bao-nhat: #fef6ec;
+  --thanh-cong: #27ae60;
+  --thanh-cong-nhat: #f0faf4;
+
+  /* Bo goc nho nhat co the (Micro-radius 2px cho toan bo app) */
+  --bo-nho: 2px;
+  --bo-vua: 2px;
+  --bo-lon: 2px;
+  --bo-tron: 2px;
+
+  /* Khoang cach */
+  --kc-2: 2px;
+  --kc-4: 4px;
+  --kc-8: 8px;
+  --kc-12: 12px;
+  --kc-16: 16px;
+  --kc-20: 20px;
+  --kc-24: 24px;
+  --kc-32: 32px;
+  --kc-40: 40px;
+  --kc-48: 48px;
+  --kc-64: 64px;
+
+  /* Bong */
+  --bong-nho: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --bong-vua: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --bong-lon: 0 10px 30px rgba(0, 0, 0, 0.10), 0 4px 8px rgba(0, 0, 0, 0.04);
+
+  /* Chieu rong toi da */
+  --rong-toi-da: 1200px;
+
+  /* Chuyen dong */
+  --chuyen-nhanh: 0.15s ease;
+  --chuyen-vua: 0.25s ease;
+  --chuyen-cham: 0.4s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html,
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--chu-chinh);
+  background-color: #f4f6f4;
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 a {
@@ -35,8 +105,244 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Typography */
+h1 { font-size: 2rem; font-weight: 700; line-height: 1.25; }
+h2 { font-size: 1.5rem; font-weight: 700; line-height: 1.3; }
+h3 { font-size: 1.25rem; font-weight: 600; line-height: 1.35; }
+h4 { font-size: 1.1rem; font-weight: 600; line-height: 1.4; }
+h5 { font-size: 1rem; font-weight: 600; line-height: 1.45; }
+h6 { font-size: 0.9rem; font-weight: 600; line-height: 1.5; }
+
+p { line-height: 1.7; }
+
+/* Layout utilities */
+.container {
+  width: 100%;
+  max-width: var(--rong-toi-da);
+  margin: 0 auto;
+  padding: 0 var(--kc-20);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--kc-8);
+  padding: var(--kc-10) var(--kc-20);
+  border-radius: var(--bo-vua);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all var(--chuyen-nhanh);
+  cursor: pointer;
+  white-space: nowrap;
+  border: 2px solid transparent;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-chinh {
+  background: var(--gradient-chinh);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.btn-chinh:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: var(--bong-vua);
+}
+
+.btn-phu {
+  background: transparent;
+  color: var(--mau-la);
+  border-color: var(--mau-la);
+}
+
+.btn-phu:hover:not(:disabled) {
+  background: var(--mau-la-nhat);
+}
+
+.btn-nguy-hiem {
+  background: var(--nguy-hiem);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.btn-nguy-hiem:hover:not(:disabled) {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.btn-bien {
+  background: var(--mau-bien);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.btn-bien:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-lon { padding: var(--kc-12) var(--kc-24); font-size: 1rem; border-radius: var(--bo-lon); }
+.btn-nho { padding: var(--kc-6) var(--kc-12); font-size: 0.8rem; }
+
+/* Form elements */
+.nhap {
+  width: 100%;
+  padding: var(--kc-10) var(--kc-12);
+  border: 1.5px solid var(--vien);
+  border-radius: var(--bo-vua);
+  font-size: 0.9rem;
+  color: var(--chu-chinh);
+  background: var(--nen-trang);
+  transition: border-color var(--chuyen-nhanh), box-shadow var(--chuyen-nhanh);
+  outline: none;
+}
+
+.nhap:focus {
+  border-color: var(--mau-la);
+  box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.12);
+}
+
+.nhap::placeholder {
+  color: var(--chu-mo);
+}
+
+.nhap-loi {
+  border-color: var(--nguy-hiem);
+}
+
+.nhap-loi:focus {
+  border-color: var(--nguy-hiem);
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.12);
+}
+
+.nhan {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--chu-phu);
+  margin-bottom: var(--kc-6);
+}
+
+.thong-bao-loi {
+  font-size: 0.8rem;
+  color: var(--nguy-hiem);
+  margin-top: var(--kc-4);
+}
+
+.nhom-form {
+  margin-bottom: var(--kc-20);
+}
+
+/* Card */
+.card {
+  background: var(--nen-trang);
+  border-radius: var(--bo-lon);
+  box-shadow: var(--bong-nho);
+  overflow: hidden;
+  transition: box-shadow var(--chuyen-vua), transform var(--chuyen-vua);
+}
+
+.card:hover {
+  box-shadow: var(--bong-vua);
+  transform: translateY(-2px);
+}
+
+/* Badge trang thai */
+.nhan-trang-thai {
+  display: inline-block;
+  padding: var(--kc-4) var(--kc-10);
+  border-radius: var(--bo-tron);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.nhan-con-trong { background: var(--thanh-cong-nhat); color: var(--thanh-cong); }
+.nhan-da-cho-thue { background: var(--mau-bien-nhat); color: var(--mau-bien); }
+.nhan-cho-duyet { background: var(--canh-bao-nhat); color: var(--canh-bao); }
+.nhan-bi-tu-choi { background: var(--nguy-hiem-nhat); color: var(--nguy-hiem); }
+.nhan-cho-xac-nhan { background: var(--canh-bao-nhat); color: var(--canh-bao); }
+.nhan-da-xac-nhan { background: var(--thanh-cong-nhat); color: var(--thanh-cong); }
+.nhan-huy { background: #f5f5f7; color: var(--chu-phu); }
+
+/* Phan tach */
+.phan-tach {
+  height: 1px;
+  background: var(--vien-nhat);
+  margin: var(--kc-24) 0;
+}
+
+/* Loading spinner */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--vien);
+  border-top-color: var(--mau-la);
+  border-radius: 50%;
+  animation: quay 0.7s linear infinite;
+}
+
+@keyframes quay {
+  to { transform: rotate(360deg); }
+}
+
+/* Thong bao hop */
+.hop-thong-bao {
+  padding: var(--kc-12) var(--kc-16);
+  border-radius: var(--bo-vua);
+  font-size: 0.875rem;
+  margin-bottom: var(--kc-16);
+}
+
+.hop-loi {
+  background: var(--nguy-hiem-nhat);
+  color: var(--nguy-hiem);
+  border: 1px solid rgba(192, 57, 43, 0.2);
+}
+
+.hop-thanh-cong {
+  background: var(--thanh-cong-nhat);
+  color: var(--thanh-cong);
+  border: 1px solid rgba(39, 174, 96, 0.2);
+}
+
+.hop-canh-bao {
+  background: var(--canh-bao-nhat);
+  color: var(--canh-bao);
+  border: 1px solid rgba(212, 128, 26, 0.2);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.3rem; }
+  .container { padding: 0 var(--kc-16); }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.4rem; }
+  .btn { padding: var(--kc-8) var(--kc-16); }
 }

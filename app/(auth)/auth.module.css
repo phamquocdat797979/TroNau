@@ -1,0 +1,172 @@
+.khung_auth {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--kc-32) var(--kc-16);
+  background: transparent;
+}
+
+.the_auth {
+  background: var(--nen-trang);
+  border-radius: var(--bo-lon);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: var(--kc-32);
+  width: 100%;
+  max-width: 440px;
+  border: 1px solid var(--vien-nhat);
+}
+
+.tieu_de {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--mau-la);
+  text-align: center;
+  margin-bottom: var(--kc-8);
+}
+
+.mo_ta {
+  font-size: 0.9rem;
+  color: var(--chu-phu);
+  text-align: center;
+  margin-bottom: var(--kc-24);
+}
+
+.form_group {
+  margin-bottom: var(--kc-16);
+}
+
+.form_group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--chu-chinh);
+  margin-bottom: var(--kc-6);
+}
+
+.form_group label span {
+  color: var(--nguy-hiem, #e53935);
+  margin-left: 2px;
+}
+
+.form_group input,
+.form_group select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--vien-nhap);
+  border-radius: var(--bo-vua);
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color var(--chuyen-nhanh);
+}
+
+.form_group input:focus,
+.form_group select:focus {
+  outline: none;
+  border-color: var(--mau-la);
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
+}
+
+.khung_nhap_mat_khau {
+  position: relative;
+  width: 100%;
+}
+
+.khung_nhap_mat_khau input {
+  padding-right: 44px;
+}
+
+.nut_an_hien_mat_khau {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  color: var(--chu-phu);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: color var(--chuyen-nhanh);
+}
+
+.nut_an_hien_mat_khau:hover {
+  color: var(--mau-la);
+}
+
+.nut_xac_nhan {
+  width: 100%;
+  padding: var(--kc-12);
+  background: var(--gradient-chinh);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--bo-vua);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: var(--kc-8);
+  transition: opacity var(--chuyen-nhanh);
+}
+
+.nut_xac_nhan:hover {
+  opacity: 0.92;
+}
+
+.nut_xac_nhan:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.thong_bao_loi {
+  background: var(--nguy-hiem-nhat);
+  color: var(--nguy-hiem);
+  padding: var(--kc-10) var(--kc-12);
+  border-radius: var(--bo-vua);
+  font-size: 0.85rem;
+  margin-bottom: var(--kc-16);
+  border: 1px solid rgba(198, 40, 40, 0.2);
+}
+
+.chuyen_trang {
+  text-align: center;
+  margin-top: var(--kc-20);
+  font-size: 0.875rem;
+  color: var(--chu-phu);
+}
+
+.chuyen_trang a {
+  color: var(--mau-la);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.chuyen_trang a:hover {
+  text-decoration: underline;
+}
+
+.thong_bao_thanh_cong {
+  background: var(--mau-la-nhat, #e8f5e9);
+  color: var(--mau-la, #2e7d32);
+  padding: var(--kc-10) var(--kc-12);
+  border-radius: var(--bo-vua);
+  font-size: 0.875rem;
+  margin-bottom: var(--kc-16);
+  border: 1px solid rgba(46, 125, 50, 0.25);
+  line-height: 1.5;
+}
+
+.quen_mat_khau_link {
+  font-size: 0.8rem;
+  color: var(--mau-la);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity var(--chuyen-nhanh);
+}
+
+.quen_mat_khau_link:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}

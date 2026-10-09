@@ -1,0 +1,63 @@
+.toast_container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  gap: var(--kc-8);
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  min-width: 280px;
+  max-width: 400px;
+  padding: var(--kc-12) var(--kc-16);
+  border-radius: var(--bo-vua);
+  background: var(--mau-toi);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  box-shadow: var(--bong-lon);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--kc-12);
+  animation: truotVao 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes truotVao {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.toast_thanh_cong {
+  background: var(--mau-la);
+}
+
+.toast_loi {
+  background: var(--nguy-hiem);
+}
+
+.toast_canh_bao {
+  background: var(--canh-bao);
+  color: var(--mau-toi);
+}
+
+.toast_thong_tin {
+  background: var(--mau-bien);
+}
+
+.nut_dong {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.nut_dong:hover {
+  opacity: 1;
+}

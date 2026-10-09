@@ -1,0 +1,164 @@
+.the_bai {
+  background: var(--nen-trang);
+  border-radius: var(--bo-lon);
+  border: 1px solid var(--vien-nhat);
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: inherit;
+  min-height: 220px;
+}
+
+.the_bai:hover {
+  border-color: var(--mau-la);
+}
+
+/* Khung anh ben trai */
+.khung_anh {
+  position: relative;
+  flex-shrink: 0;
+  width: 280px;
+  background: var(--nen-xam);
+  overflow: hidden;
+}
+
+.anh_phong {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.anh_mac_dinh {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--mau-la-nhat), var(--mau-bien-nhat));
+  color: var(--mau-la);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.huy_hieu_trang_thai {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+/* Noi dung ben phai */
+.noi_dung {
+  padding: 20px 26px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  gap: 6px;
+}
+
+.dia_chi {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--chu-chinh);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.gia_thue {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--mau-la);
+}
+
+.hang_chi_phi {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: var(--chu-phu);
+  background: var(--nen-xam);
+  padding: 6px 12px;
+  border-radius: var(--bo-nho);
+  width: fit-content;
+}
+
+.hang_meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: var(--chu-phu);
+  margin-top: 2px;
+}
+
+.meta_item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ghi_chu {
+  font-size: 0.88rem;
+  color: var(--chu-phu);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+  margin: 0;
+}
+
+.ngay_trong_note {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--nguy-hiem);
+  background: var(--nguy-hiem-nhat);
+  padding: 3px 10px;
+  border-radius: var(--bo-vua);
+  display: inline-block;
+  border: 1px solid rgba(192, 57, 43, 0.2);
+  width: fit-content;
+}
+
+.chan_the {
+  display: flex;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid var(--vien-nhat);
+  font-size: 0.8rem;
+  color: var(--chu-phu);
+  margin-top: auto;
+}
+
+.ten_chu_tro {
+  font-weight: 600;
+  color: var(--chu-chinh);
+}
+
+/* Responsive: man hinh nho thi xep doc */
+@media (max-width: 640px) {
+  .the_bai {
+    flex-direction: column;
+    min-height: unset;
+  }
+
+  .khung_anh {
+    width: 100%;
+    height: 200px;
+  }
+
+  .noi_dung {
+    padding: 16px;
+  }
+}

@@ -1,0 +1,234 @@
+.khung_banner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 21 / 7;
+  max-height: 320px;
+  min-height: 180px;
+  border-radius: var(--bo-lon);
+  overflow: hidden;
+  margin-bottom: var(--kc-32);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  background: #112211;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.slide_tich_cuc {
+  opacity: 1;
+}
+
+.anh_banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay_gioi_thieu {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(10, 30, 22, 0.88) 0%,
+    rgba(15, 45, 55, 0.72) 50%,
+    rgba(0, 0, 0, 0.25) 100%
+  );
+  display: flex;
+  align-items: center;
+  padding: 0 var(--kc-32);
+  z-index: 2;
+}
+
+.noi_dung_gioi_thieu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 800px;
+}
+
+.khung_logo_banner {
+  width: 68px;
+  height: 68px;
+  border-radius: var(--bo-lon);
+  background: #ffffff;
+  padding: 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.logo_banner_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--bo-vua);
+}
+
+.phan_chu_banner {
+  color: #ffffff;
+}
+
+.tieu_de_banner {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin: 0 0 6px 0;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  letter-spacing: -0.5px;
+}
+
+.tieu_de_banner span {
+  color: #a8e6cf;
+}
+
+.mo_ta_banner {
+  font-size: 0.95rem;
+  margin: 0 0 12px 0;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.4;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.danh_sach_the_banner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.the_giao_dien {
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 4px 12px;
+  border-radius: var(--bo-vua);
+  font-size: 0.775rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .overlay_gioi_thieu {
+    padding: 0 var(--kc-16);
+  }
+  .khung_logo_banner {
+    width: 52px;
+    height: 52px;
+  }
+  .tieu_de_banner {
+    font-size: 1.3rem;
+  }
+  .mo_ta_banner {
+    font-size: 0.825rem;
+  }
+}
+
+
+
+
+.banner_mac_dinh {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+  padding: var(--kc-20);
+  background: var(--gradient-chinh);
+}
+
+.banner_mac_dinh h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: var(--kc-8);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.banner_mac_dinh p {
+  font-size: 1.05rem;
+  opacity: 0.9;
+}
+
+.nut_chuyen {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nut_chuyen:hover {
+  background: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.nut_chuyen:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.nut_trai { left: 14px; }
+.nut_phai { right: 14px; }
+
+.cham_chuyen {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 5;
+  padding: 4px 10px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.cham {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cham:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.cham_tich_cuc {
+  background: #ffffff;
+  width: 16px;
+  border-radius: 3px;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+}

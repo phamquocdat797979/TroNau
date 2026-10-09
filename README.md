@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Trọ Nẫu (TroNau.vn) - Web App Tìm Kiếm Phòng Trọ Tại Quy Nhơn
 
-## Getting Started
+Nền tảng kết nối trực tiếp giữa **Sinh viên tìm trọ** và **Chủ trọ cho thuê** tại Thành phố Quy Nhơn, Bình Định.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Hướng Dẫn Khởi Chạy Local (Development)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Cài đặt phụ thuộc**:
+   ```bash
+   npm install
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Chạy server phát triển (Cổng 3001)**:
+   ```bash
+   npm run dev
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Truy cập ứng dụng**:
+   Mở trình duyệt và truy cập địa chỉ: [http://localhost:3001](http://localhost:3001)
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Công Nghệ Sử Dụng
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Frontend**: Next.js 14 (App Router), TypeScript (Strict Mode), Vanilla CSS Modules.
+- **Backend & CSDL**: Supabase Cloud (PostgreSQL, RLS Security, Auth, Storage, Realtime).
+- **Email Service**: Gmail SMTP (Nodemailer).
+- **Cron Jobs**: Vercel Cron (`02:00 ICT` hàng ngày).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Tính Năng Nổi Bật
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Bảo vệ thông tin cá nhân**: Số nhà và Số điện thoại chủ trọ/sinh viên được bảo mật tuyệt đối, chỉ hiển thị khi Lịch hẹn đạt trạng thái `Đã xác nhận`.
+- **Phân quyền 3 đối tượng**: Sinh viên, Chủ trọ và Quản trị viên (Admin).
+- **Đặt lịch trực tuyến**: Lưới đặt lịch rảnh theo khung giờ 1h trực quan.
+- **Không biểu tượng / Emoji**: Giao diện tiếng Việt chuẩn có dấu 100%, phong cách hiện đại dọn dẹp tối đa.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Tài Liệu Chi Tiết
+
+Xem tài liệu quy chuẩn chính thức của dự án tại: [TAI_LIEU.md](file:///c:/Users/MY%20PC/Downloads/TroNau/TAI_LIEU.md)
+

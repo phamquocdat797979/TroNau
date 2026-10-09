@@ -1,0 +1,70 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--kc-16);
+  animation: hienLen 0.2s ease-out;
+}
+
+@keyframes hienLen {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal {
+  background: var(--nen-trang);
+  border-radius: var(--bo-lon);
+  box-shadow: var(--bong-lon);
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: phongTo 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes phongTo {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.dau_modal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--kc-16) var(--kc-20);
+  border-bottom: 1px solid var(--vien-nhat);
+}
+
+.tieu_de {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--chu-chinh);
+  margin: 0;
+}
+
+.nut_dong {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--chu-phu);
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  transition: color var(--chuyen-nhanh);
+}
+
+.nut_dong:hover {
+  color: var(--chu-chinh);
+}
+
+.than_modal {
+  padding: var(--kc-20);
+  overflow-y: auto;
+}
