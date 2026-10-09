@@ -9,7 +9,7 @@ import Badge from '@/components/Badge/Badge';
 import Modal from '@/components/Modal/Modal';
 import ToastContainer, { hienToast } from '@/components/Toast/Toast';
 import { taoSupabaseClient } from '@/lib/supabase/client';
-import { dinhDangDuong, dinhDangPhuong } from '@/lib/utils';
+import { dinhDangDuong, dinhDangPhuong, dinhDangNgay, dinhDangGio } from '@/lib/utils';
 import type { BaiDangCongKhai, BinhLuan, Profile } from '@/types';
 import styles from './phong-tro.module.css';
 
@@ -526,7 +526,7 @@ export default function ChiTietPhongTroPage() {
             {lichHenHienTai && lichHenHienTai.trang_thai === 'cho_xac_nhan' && (
               <div style={{ background: '#fff8e1', padding: '14px 18px', borderRadius: '8px', border: '1px solid #ffe082', marginBottom: '16px', fontSize: '0.9rem', color: '#8d6e63' }}>
                 <div style={{ fontWeight: '700', color: '#f57f17', marginBottom: '4px' }}>Bạn đã đăng ký 1 lịch hẹn xem phòng này (Chờ xác nhận):</div>
-                <div>Thời gian hẹn: <strong>{new Date(lichHenHienTai.ngay_hen).toLocaleDateString('vi-VN')}</strong> từ <strong>{lichHenHienTai.gio_bat_dau.substring(0,5)}</strong> đến <strong>{lichHenHienTai.gio_ket_thuc.substring(0,5)}</strong></div>
+                <div>Thời gian hẹn: <strong>{dinhDangNgay(lichHenHienTai.ngay_hen)}</strong> từ <strong>{dinhDangGio(lichHenHienTai.gio_bat_dau)}</strong> đến <strong>{dinhDangGio(lichHenHienTai.gio_ket_thuc)}</strong></div>
                 <div style={{ fontSize: '0.825rem', marginTop: '6px', color: 'var(--chu-phu)' }}>Vui lòng chờ chủ trọ xác nhận hoặc hủy lịch trong trang &quot;Lịch hẹn của tôi&quot; nếu bạn muốn chọn lại giờ khác.</div>
               </div>
             )}
@@ -534,7 +534,7 @@ export default function ChiTietPhongTroPage() {
             {profile?.role === 'sinh_vien' && daXacNhanLich && soNha && sdtChuTro ? (
               <div style={{ background: 'var(--mau-la-nhat)', padding: '14px 18px', borderRadius: '8px', border: '1px solid rgba(45,106,79,0.25)', marginBottom: '16px', fontSize: '0.9rem' }}>
                 <div style={{ fontWeight: '700', color: 'var(--mau-la)', marginBottom: '6px' }}>Đã xác nhận lịch hẹn xem phòng!</div>
-                <div><strong>Thời gian hẹn:</strong> {lichHenHienTai ? `${new Date(lichHenHienTai.ngay_hen).toLocaleDateString('vi-VN')} từ ${lichHenHienTai.gio_bat_dau.substring(0,5)} đến ${lichHenHienTai.gio_ket_thuc.substring(0,5)}` : 'Đã xác nhận'}</div>
+                <div><strong>Thời gian hẹn:</strong> {lichHenHienTai ? `${dinhDangNgay(lichHenHienTai.ngay_hen)} từ ${dinhDangGio(lichHenHienTai.gio_bat_dau)} đến ${dinhDangGio(lichHenHienTai.gio_ket_thuc)}` : 'Đã xác nhận'}</div>
                 <div style={{ marginTop: '4px' }}><strong>Địa chỉ chi tiết:</strong> {soNha}, {dinhDangDuong(baiDang.duong)}, {dinhDangPhuong(baiDang.phuong)}</div>
                 <div style={{ marginTop: '4px' }}><strong>Số điện thoại chủ trọ:</strong> {sdtChuTro}</div>
               </div>
