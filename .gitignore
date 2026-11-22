@@ -35,19 +35,24 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# internal documentation
+# internal documentation and coursework files (bai thuc hanh 1 den 7)
 BAO_CAO_RA_SOAT_PROJECT.md
 implementation_plan.md
 yeu-cau.md
 TAI_LIEU.md
-bai-1.md
-BAI_THUC_HANH_1.md
-TRELLO_BAI_THUC_HANH_1.md
-bai-2.md
-BAI_THUC_HANH_2.md
-TRELLO_BAI_THUC_HANH_2.md
+bai-*.md
+BAI_THUC_HANH_*.md
+TRELLO_BAI_THUC_HANH_*.md
+TEST_CASES_*.md
+KICH_BAN_*.md
+HUONG_DAN_*.md
+HUONG_DAN_SU_DUNG.md
+assets_bai_*/
+generate_diagrams*.py
+*.docx
+*.xlsx
+*.pdf
+*.jpg
+*.png
 
-# supabase database files
-supabase/
-
-
+temp_screens/
