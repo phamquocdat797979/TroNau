@@ -5,7 +5,7 @@
 <h1 align="center">TRỌ NẪU</h1>
 
 <p align="center">
-  <b>Nền tảng kết nối trực tiếp giữa Sinh viên tìm trọ và Chủ trọ cho thuê tại TP. Quy Nhơn, Bình Định</b>
+  <b>Nền tảng kết nối trực tiếp giữa Sinh viên tìm trọ và Chủ trọ cho thuê tại Quy Nhơn</b>
 </p>
 
 <p align="center">
@@ -17,7 +17,7 @@
 
 ## 1. TỔNG QUAN DỰ ÁN
 
-**Trọ Nẫu** là ứng dụng web app hiện đại được phát triển dành riêng cho cộng đồng sinh viên và chủ trọ tại thành phố Quy Nhơn, tỉnh Bình Định. Hệ thống giúp sinh viên tìm kiếm phòng trọ chất lượng, đặt lịch hẹn xem phòng trực tuyến nhanh chóng, đồng thời hỗ trợ chủ trọ quản lý tin đăng và lịch hẹn hiệu quả.
+**Trọ Nẫu** là ứng dụng web app hiện đại được phát triển dành riêng cho cộng đồng sinh viên và chủ trọ tại Quy Nhơn. Hệ thống giúp sinh viên tìm kiếm phòng trọ chất lượng, đặt lịch hẹn xem phòng trực tuyến nhanh chóng, đồng thời hỗ trợ chủ trọ quản lý tin đăng và lịch hẹn hiệu quả.
 
 ---
 
