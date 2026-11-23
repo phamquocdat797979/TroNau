@@ -340,13 +340,13 @@ export default function AdminDashboardPage() {
         .getPublicUrl(filePath);
 
       setLogoUrl(publicUrlData.publicUrl);
-      hienToast('Đã tải ảnh logo mới! Bấm "Lưu Logo & Tên App" để hoàn tất.', 'thanh_cong');
+      hienToast('Đã tải ảnh logo mới! Bấm "Lưu nội dung" để hoàn tất.', 'thanh_cong');
     } catch (err: any) {
       hienToast('Lỗi: ' + err.message, 'loi');
     }
   }
 
-  // Luu Logo & Ten App (Hinh 1)
+  // Luu Logo va Ten App (Hinh 1)
   async function xuLyLuuLogoVaTenApp(e: React.FormEvent) {
     e.preventDefault();
     setDangLuuLogo(true);
@@ -366,7 +366,7 @@ export default function AdminDashboardPage() {
 
       const data = await res.json();
       if (!res.ok || data.loi) {
-        hienToast(data.loi || 'Lỗi cập nhật Logo & Tên App', 'loi');
+        hienToast(data.loi || 'Lỗi cập nhật Logo và Tên ứng dụng', 'loi');
         setDangLuuLogo(false);
         return;
       }
@@ -551,13 +551,13 @@ export default function AdminDashboardPage() {
                 className={`${styles.nut_tab} ${tab === 'logo_va_ten' ? styles.nut_tab_tich_cuc : ''}`}
                 onClick={() => setTab('logo_va_ten')}
               >
-                Logo & Tên
+                Logo và Tên
               </button>
               <button
                 className={`${styles.nut_tab} ${tab === 'duong_va_phuong' ? styles.nut_tab_tich_cuc : ''}`}
                 onClick={() => setTab('duong_va_phuong')}
               >
-                Đường & Phường
+                Đường và Phường
               </button>
               <button
                 className={`${styles.nut_tab} ${tab === 'quan_ly_footer' ? styles.nut_tab_tich_cuc : ''}`}
