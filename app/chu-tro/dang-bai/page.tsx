@@ -371,7 +371,7 @@ export default function DangBaiPage() {
             className={styles.nut_luu}
             disabled={dangXuLy || !!biHan}
           >
-            {dangXuLy ? 'Đang tải ảnh & đăng bài...' : 'Gửi bài chờ Admin duyệt'}
+            {dangXuLy ? 'Đang tải ảnh và đăng bài...' : 'Gửi bài chờ Admin duyệt'}
           </button>
         </form>
       </div>

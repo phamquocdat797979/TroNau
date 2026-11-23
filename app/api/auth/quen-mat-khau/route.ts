@@ -117,7 +117,7 @@ export async function POST(request: NextRequest) {
       }
     } else {
       return NextResponse.json(
-        { loi: "Hệ thống chưa cấu hình tài khoản gửi email (GMAIL_USER & GMAIL_APP_PASSWORD)" },
+        { loi: "Hệ thống chưa cấu hình tài khoản gửi email (GMAIL_USER và GMAIL_APP_PASSWORD)" },
         { status: 500 }
       );
     }
