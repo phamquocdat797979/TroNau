@@ -11,7 +11,7 @@ export const CAI_DAT_MAC_DINH: CaiDatHeThong = {
   footer_sinh_vien: [
     'Tìm phòng trọ uy tín gần trường học',
     'Đặt lịch hẹn xem phòng trực tuyến',
-    'Xem địa chỉ số nhà & SĐT chủ trọ khi được xác nhận',
+    'Xem địa chỉ số nhà và SĐT chủ trọ khi được xác nhận',
   ],
   footer_chu_tro: [
     'Đăng tin phòng trọ hoàn toàn miễn phí',

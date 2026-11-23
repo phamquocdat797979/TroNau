@@ -841,7 +841,7 @@ export default function AdminDashboardPage() {
                         </label>
                         <input
                           type="text"
-                          placeholder="VD: Nền tảng tìm kiếm phòng trọ uy tín, nhanh chóng & tiện lợi dành cho Sinh viên và Chủ trọ."
+                          placeholder="VD: Nền tảng tìm kiếm phòng trọ uy tín, nhanh chóng và tiện lợi dành cho Sinh viên và Chủ trọ."
                           value={bForm.mo_ta}
                           onChange={(e) =>
                             setBannerForm((prev) => ({
@@ -859,7 +859,7 @@ export default function AdminDashboardPage() {
                         </label>
                         <input
                           type="text"
-                          placeholder="VD: Phòng trọ chính chủ, Đặt lịch trực tuyến, Gần các trường ĐH & CĐ Quy Nhơn"
+                          placeholder="VD: Phòng trọ chính chủ, Đặt lịch trực tuyến, Gần các trường ĐH và CĐ Quy Nhơn"
                           value={bForm.the_tags}
                           onChange={(e) =>
                             setBannerForm((prev) => ({

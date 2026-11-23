@@ -17,8 +17,8 @@ const DEFAULT_BANNERS: Banner[] = [
     url_anh: '/banner-1.jpg',
     thu_tu: 1,
     tieu_de: 'Trọ Nẫu',
-    mo_ta: 'Nền tảng tìm kiếm phòng trọ uy tín, nhanh chóng & tiện lợi dành cho Sinh viên và Chủ trọ.',
-    the_tags: 'Phòng trọ chính chủ, Đặt lịch trực tuyến, Gần các trường ĐH & CĐ Quy Nhơn',
+    mo_ta: 'Nền tảng tìm kiếm phòng trọ uy tín, nhanh chóng và tiện lợi dành cho Sinh viên và Chủ trọ.',
+    the_tags: 'Phòng trọ chính chủ, Đặt lịch trực tuyến, Gần các trường ĐH và CĐ Quy Nhơn',
     lien_ket: '/',
     updated_at: new Date().toISOString(),
   },
@@ -43,7 +43,7 @@ export default function BannerCarousel({ banners }: Props) {
       {danhSachHienThi.map((b, idx) => {
         const tieuDeBanner = b.tieu_de || (idx === 0 ? `${caiDat.ten_app} - ${caiDat.sub_name}` : '');
         const moTaBanner = b.mo_ta || (idx === 0 ? caiDat.footer_mo_ta : '');
-        const tagsStr = b.the_tags || (idx === 0 ? 'Phòng trọ chính chủ, Đặt lịch trực tuyến, Gần các trường ĐH & CĐ Quy Nhơn' : '');
+        const tagsStr = b.the_tags || (idx === 0 ? 'Phòng trọ chính chủ, Đặt lịch trực tuyến, Gần các trường ĐH và CĐ Quy Nhơn' : '');
         const danhSachTags = tagsStr ? tagsStr.split(',').map((t) => t.trim()).filter(Boolean) : [];
 
         const Content = (

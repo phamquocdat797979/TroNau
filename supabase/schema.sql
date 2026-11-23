@@ -499,7 +499,7 @@ CREATE POLICY "binh_luan_xoa_cua_minh" ON binh_luan FOR DELETE
   TO authenticated
   USING (sinh_vien_id = auth.uid() OR is_admin());
 
--- 5.6. Hinh Anh & Banner Policies
+-- 5.6. Hinh Anh va Banner Policies
 DROP POLICY IF EXISTS "cong_khai_doc_hinh_anh" ON hinh_anh_bai_dang;
 CREATE POLICY "cong_khai_doc_hinh_anh" ON hinh_anh_bai_dang FOR SELECT
   TO anon, authenticated USING (TRUE);
@@ -565,8 +565,8 @@ VALUES
     1,
     '/banner-1.jpg',
     'Trọ Nẫu',
-    'Nền tảng tìm kiếm phòng trọ uy tín, nhanh chóng & tiện lợi dành cho Sinh viên và Chủ trọ.',
-    'Phòng trọ chính chủ, Đặt lịch trực tuyến, Gần các trường ĐH & CĐ Quy Nhơn',
+    'Nền tảng tìm kiếm phòng trọ uy tín, nhanh chóng và tiện lợi dành cho Sinh viên và Chủ trọ.',
+    'Phòng trọ chính chủ, Đặt lịch trực tuyến, Gần các trường ĐH và CĐ Quy Nhơn',
     '/'
   ),
   (
@@ -580,7 +580,7 @@ VALUES
   (
     3,
     '/banner-3.jpg',
-    'Đầy Đủ Tiện Nghi & An Ninh',
+    'Đầy Đủ Tiện Nghi và An Ninh',
     'Danh sách phòng trọ đa dạng khu vực Quy Nhơn được kiểm duyệt kỹ càng, cập nhật liên tục.',
     'Giờ giấc tự do, An ninh đảm bảo, Giá cả hợp lý',
     '/'
@@ -623,7 +623,7 @@ VALUES
   ),
   (
     'footer_sinh_vien',
-    '["Tìm phòng trọ uy tín gần trường học", "Đặt lịch hẹn xem phòng trực tuyến", "Xem địa chỉ số nhà & SĐT chủ trọ khi được xác nhận"]'::jsonb
+    '["Tìm phòng trọ uy tín gần trường học", "Đặt lịch hẹn xem phòng trực tuyến", "Xem địa chỉ số nhà và SĐT chủ trọ khi được xác nhận"]'::jsonb
   ),
   (
     'footer_chu_tro',
