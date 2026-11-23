@@ -263,7 +263,7 @@ export default function ChiTietPhongTroPage() {
       return { ranh: false, daDat: false, hopLe: false };
     }
 
-    // 3. Kiem tra da co ai dat lich trung ngay & trung khung gio nay chua
+    // 3. Kiem tra da co ai dat lich trung ngay va trung khung gio nay chua
     const daDat = danhSachLichDaDat.some((lh) => {
       if (lh.ngay_hen !== dateStr) return false;
       const lhStart = lh.gio_bat_dau.substring(0, 5);
@@ -469,7 +469,7 @@ export default function ChiTietPhongTroPage() {
             )}
           </div>
 
-          {/* === TIEU DE & BADGE === */}
+          {/* === TIEU DE VA BADGE === */}
           <div style={{ background: '#fff', borderRadius: '12px', padding: '20px 24px', marginBottom: '12px', border: '1px solid var(--vien-nhat)' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '12px', marginBottom: '10px' }}>
               <h1 style={{ fontSize: '1.25rem', fontWeight: '700', color: 'var(--chu-chinh)', lineHeight: '1.4', margin: 0 }}>
@@ -480,7 +480,7 @@ export default function ChiTietPhongTroPage() {
               </div>
             </div>
 
-            {/* GIA & CHI PHI */}
+            {/* GIA VA CHI PHI */}
             <div style={{ display: 'flex', alignItems: 'baseline', gap: '16px', flexWrap: 'wrap', marginBottom: '12px' }}>
               <span style={{ fontSize: '1.6rem', fontWeight: '800', color: 'var(--mau-la)' }}>{baiDang.tien_thue}</span>
               <span style={{ fontSize: '1rem', color: 'var(--chu-phu)' }}>/tháng</span>
@@ -758,7 +758,7 @@ export default function ChiTietPhongTroPage() {
             {ngayDangChon.fullLabel}
           </div>
 
-          {/* BANG KHUNG GIO: BUOI SANG & BUOI CHIEU */}
+          {/* BANG KHUNG GIO: BUOI SANG VA BUOI CHIEU */}
           <div style={{ border: '1px solid var(--vien-nhap)', borderRadius: 'var(--bo-vua)', padding: '16px', background: 'var(--nen-xam)', marginBottom: '20px' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
               {/* BUOI SANG */}

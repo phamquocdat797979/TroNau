@@ -54,7 +54,7 @@ export default function SuaBaiPage() {
   const [ghiChu, setGhiChu] = useState('');
   const [khungGioBiKhoa, setKhungGioBiKhoa] = useState(false);
 
-  // Existing URLs & new File objects for 4 images
+  // Existing URLs and new File objects for 4 images
   const [existingAnh, setExistingAnh] = useState<(string | null)[]>([null, null, null, null]);
   const [newFilesAnh, setNewFilesAnh] = useState<(File | null)[]>([null, null, null, null]);
   const [previewsAnh, setPreviewsAnh] = useState<(string | null)[]>([null, null, null, null]);
@@ -271,7 +271,7 @@ export default function SuaBaiPage() {
         return;
       }
 
-      // 3. Update Images in Storage & DB
+      // 3. Update Images in Storage and DB
       // Clear old DB image records first
       await supabase.from('hinh_anh_bai_dang').delete().eq('bai_dang_id', baiId);
 

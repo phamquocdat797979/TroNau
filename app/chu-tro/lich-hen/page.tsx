@@ -588,7 +588,7 @@ export default function ChuTroLichHenPage() {
                     })}
                   </div>
 
-                  {/* HEADER NGAY DANG CHON & NUT THAO TAC NHANH */}
+                  {/* HEADER NGAY DANG CHON VA NUT THAO TAC NHANH */}
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '18px', flexWrap: 'wrap', gap: '12px' }}>
                     <div style={{ fontWeight: '700', fontSize: '1.05rem', color: 'var(--chu-chinh)' }}>
                       Khung giờ rảnh cho: <span style={{ color: 'var(--mau-chu-dao)' }}>{ngayDangChon.fullLabel}</span>
@@ -631,7 +631,7 @@ export default function ChuTroLichHenPage() {
                     </div>
                   </div>
 
-                  {/* BANG 12 KHUNG GIO 1 TIENG CHUAN FIX ORDER & NEN TRANG 100% */}
+                  {/* BANG 12 KHUNG GIO 1 TIENG CHUAN FIX ORDER VA NEN TRANG 100% */}
                   {(() => {
                     const slotsCurrentDay = slotForm[ngayDangChon.dateStr] || new Set();
                     return (

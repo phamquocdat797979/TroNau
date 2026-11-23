@@ -45,16 +45,16 @@ export default function AdminDashboardPage() {
   // State Sub tab Banner (Banner 1, 2, 3)
   const [subTabBanner, setSubTabBanner] = useState<number>(1);
 
-  // State Sub tab Duong & Phuong (Phuong, Duong)
+  // State Sub tab Duong va Phuong (Phuong, Duong)
   const [subTabDuongPhuong, setSubTabDuongPhuong] = useState<'phuong' | 'duong'>('phuong');
 
-  // State Logo & Ten App (Hinh 1)
+  // State Logo va Ten App (Hinh 1)
   const [tenApp, setTenApp] = useState(caiDat.ten_app || 'Trọ');
   const [subName, setSubName] = useState(caiDat.sub_name || 'Nẫu');
   const [logoUrl, setLogoUrl] = useState(caiDat.logo_url || '/logo.png');
   const [dangLuuLogo, setDangLuuLogo] = useState(false);
 
-  // State Duong & Phuong (Hinh 3)
+  // State Duong va Phuong (Hinh 3)
   const [dsPhuong, setDsPhuong] = useState<string[]>(caiDat.danh_sach_phuong || []);
   const [phuongMoi, setPhuongMoi] = useState('');
   const [dsDuong, setDsDuong] = useState<string[]>(caiDat.danh_sach_duong || []);
@@ -96,7 +96,7 @@ export default function AdminDashboardPage() {
   }, []);
 
   // Update local states when global caiDat loads
-  // dsPhuong & dsDuong ARE synced here for initial Supabase load.
+  // dsPhuong va dsDuong ARE synced here for initial Supabase load.
   // After save, we do NOT call taiLaiCaiDat() so this effect won't re-run and won't overwrite local edits.
   useEffect(() => {
     setTenApp(caiDat.ten_app || 'Trọ');
@@ -526,7 +526,7 @@ export default function AdminDashboardPage() {
   return (
     <LayoutTaiKhoan>
       <div className={styles.khung_admin}>
-        {/* 1. MANAGEMENT NAVIGATION TABS (Kéo dài tràn viền 100vw cùng độ dài khớp hệt với 2 thanh Header & NavNgang) */}
+        {/* 1. MANAGEMENT NAVIGATION TABS (Kéo dài tràn viền 100vw cùng độ dài khớp hệt với 2 thanh Header va NavNgang) */}
         <div className={styles.thanh_tab_full_width}>
           <div className="container">
             <div className={styles.noi_dung_thanh_tab}>
@@ -888,7 +888,7 @@ export default function AdminDashboardPage() {
         )}
 
         {/* ============================================================ */}
-        {/* TAB 3: LOGO & TEN UNG DUNG (HINH 1) */}
+        {/* TAB 3: LOGO VA TEN UNG DUNG (HINH 1) */}
         {/* ============================================================ */}
         {tab === 'logo_va_ten' && (
           <form onSubmit={xuLyLuuLogoVaTenApp} className={styles.the_cai_dat} style={{ maxWidth: '100%' }}>
@@ -905,7 +905,7 @@ export default function AdminDashboardPage() {
               boxShadow: '0 4px 16px rgba(0,0,0,0.15)',
               border: '1px solid rgba(255,255,255,0.1)',
             }}>
-              {/* Logo & Tên hiển thị chuẩn Header.tsx */}
+              {/* Logo va Ten hien thi chuan Header.tsx */}
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                 <div style={{
                   width: '40px',
@@ -1018,7 +1018,7 @@ export default function AdminDashboardPage() {
         )}
 
         {/* ============================================================ */}
-        {/* TAB 4: QUAN LY DUONG & PHUONG */}
+        {/* TAB 4: QUAN LY DUONG VA PHUONG */}
         {/* ============================================================ */}
         {tab === 'duong_va_phuong' && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
@@ -1057,7 +1057,7 @@ export default function AdminDashboardPage() {
               </div>
             </div>
 
-            {/* SUB-TABS SELECTOR PHƯỜNG & ĐƯỜNG */}
+            {/* SUB-TABS SELECTOR PHƯỜNG VÀ ĐƯỜNG */}
             <div style={{ display: 'flex', gap: '8px' }}>
               <button
                 type="button"

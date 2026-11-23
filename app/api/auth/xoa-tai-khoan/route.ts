@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ loi: "Không tìm thấy thông tin tài khoản" }, { status: 404 });
     }
 
-    // Bắt buộc: Nút xóa chỉ áp dụng cho Chủ trọ & Sinh viên
+    // Bắt buộc: Nút xóa chỉ áp dụng cho Chủ trọ và Sinh viên
     if (profile.role === "admin") {
       return NextResponse.json(
         { loi: "Tài khoản Quản trị viên (Admin) không thể tự xóa từ đây" },

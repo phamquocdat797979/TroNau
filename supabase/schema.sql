@@ -284,7 +284,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
 
--- 4.2. Stored Procedure Chuyen trang thai da cho thue & xoa tat ca lich hen (Rule M & O & L)
+-- 4.2. Stored Procedure Chuyen trang thai da cho thue va xoa tat ca lich hen (Rule M va O va L)
 CREATE OR REPLACE FUNCTION chuyen_trang_thai_da_cho_thue(p_bai_dang_id UUID)
 RETURNS VOID AS $$
 DECLARE
@@ -304,7 +304,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
 
--- 4.3. Stored Procedure Tu dong huy & xoa lich hen qua han (Vercel Cron Job)
+-- 4.3. Stored Procedure Tu dong huy va xoa lich hen qua han (Vercel Cron Job)
 CREATE OR REPLACE FUNCTION tu_dong_huy_lich_hen_qua_han()
 RETURNS VOID AS $$
 BEGIN
@@ -316,7 +316,7 @@ $$ LANGUAGE plpgsql SECURITY DEFINER;
 
 
 -- ============================================================
--- BUOC 5: HÀM KIỂM TRA ADMIN & BẬT RLS POLICIES
+-- BUOC 5: HÀM KIỂM TRA ADMIN VÀ BẬT RLS POLICIES
 -- ============================================================
 
 -- Hàm kiểm tra Admin bảo mật (SECURITY DEFINER bypass RLS chống lặp vô tận Postgres 42P17)
@@ -527,7 +527,7 @@ CREATE POLICY "admin_quan_ly_banner" ON banner FOR ALL
 
 
 -- ============================================================
--- BUOC 6: STORAGE BUCKETS & POLICIES
+-- BUOC 6: STORAGE BUCKETS VÀ POLICIES
 -- ============================================================
 INSERT INTO storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
 VALUES
@@ -641,7 +641,7 @@ ON CONFLICT (khoa) DO UPDATE SET
 -- ============================================================
 -- BUOC 9: THIET LAP TAI KHOAN QUAN TRI VIEN (ADMIN)
 -- ============================================================
--- Buoc 1: Vao Supabase Dashboard > Authentication > Users > Nhan "Add User" > Tao user voi Email & Mat khau
+-- Buoc 1: Vao Supabase Dashboard > Authentication > Users > Nhan "Add User" > Tao user voi Email va Mat khau
 -- Buoc 2: Copy UUID (ID) cua user vua tao, thay vao vi tri duoi day va chay cau lenh SQL:
 
 -- INSERT INTO public.profiles (id, role, ho_ten, so_dien_thoai, email)
